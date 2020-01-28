@@ -1,4 +1,9 @@
 # Chest_X_ray_pneumonia_prediction
+<a href="#">
+  <div align="center">
+    <img src="images/img.png" width='700'/>
+  </div>
+</a>
 
 This notebook used Keras with tensorflow as backend and CNN (Convolutional Neural Network) to predict about Chest X-rays scan image that whether a person has Pneumonia or he is Normal.
 
