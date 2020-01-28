@@ -13,7 +13,8 @@ This notebook used Keras with tensorflow as backend and CNN (Convolutional Neura
 
 # Test and Run it Now
 
-Google Colab notebook of this Project is available here.
+Google Colab notebook of this Project is available here.[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/weiji14/deepbedmap/]
+
 
 ## Note
 This project has both python notebook file and .py script. Run the code using Google Colab https://colab.research.google.com/ or locally in jupyter notebook. If you are running it locally first install the rquirements before running the files (download the requirements using requirement.txt file).
