@@ -13,8 +13,8 @@ This notebook used Keras with tensorflow as backend and CNN (Convolutional Neura
 
 # Test and Run it Now
 
-Google Colab notebook of this Project is available here. ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
-https://colab.research.google.com/drive/1BwVt61I_C7yWIsgqkawqDEElqVpReQss)]
+Google Colab notebook of this Project is available here. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/drive/1BwVt61I_C7yWIsgqkawqDEElqVpReQss)
 
 
 ## Note
