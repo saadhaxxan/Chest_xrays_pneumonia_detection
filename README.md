@@ -1,7 +1,7 @@
 # Chest_X_ray_pneumonia_prediction
 <a href="#">
   <div align="center">
-    <img src="images/img.png" width='700'/>
+    <img src="images/img.PNG" width='700'/>
   </div>
 </a>
 
