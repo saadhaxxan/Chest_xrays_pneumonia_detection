@@ -29,14 +29,6 @@ print(os.listdir("chest_xray/train"))
 
 print(os.listdir("chest_xray/test"))
 
-#showing image using matplotlib of normal xray
-img_name = 'NORMAL2-IM-0588-0001.jpeg'
-img_normal = load_img('chest_xray/train/NORMAL/' + img_name)
-
-print('NORMAL')
-plt.imshow(img_normal)
-plt.show()
-
 #setting image width and height to give input to the CNN
 img_width, img_height = 150,150
 
@@ -45,11 +37,6 @@ train_data_dir = 'chest_xray/train'
 validation_data_dir = 'chest_xray/val'
 test_data_dir = 'chest_xray/test'
 
-#values of the data are defined
-nb_train_samples = 5216
-nb_validation_samples = 16
-epochs = 5
-batch_size = 16
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -78,8 +65,14 @@ model.add(Activation('sigmoid'))
 
 model.layers
 
+#values of the data are defined
+training_samples = 5216
+validation_samples = 16
+epochs = 10
+batch_size = 16
+
 model.compile(loss='binary_crossentropy',
-              optimizer='rmsprop',
+              optimizer='adam',
               metrics=['accuracy'])
 
 # this is the augmentation configuration we will use for training
@@ -111,10 +104,10 @@ test_generator = test_datagen.flow_from_directory(
 
 model.fit_generator(
     train_generator,
-    steps_per_epoch=nb_train_samples//nb_validation_samples,
+    steps_per_epoch=training_samples//validation_samples,
     epochs=epochs,
     validation_data=validation_generator,
-    validation_steps=nb_validation_samples//batch_size)
+    validation_steps=validation_samples//batch_size)
 
 scores = model.evaluate_generator(validation_generator,steps=1)
 print("\n%s: %.2f%%" % (model.metrics_names[0], scores[1]*100))
